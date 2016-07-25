@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['title'=>'Proteje tus metales']);
+});
+Route::get('/producto', function () {
+    return view('producto',['title'=>'Producto']);
+});
+Route::get('/producto2', function () {
+    return view('producto2',['title'=>'Producto2']);
+});
+Route::get('/contacto', function () {
+    return view('contacto',['title'=>'Contacto']);
+});
+Route::get('/puntos-de-venta', function () {
+    return view('puntosdeventa',['title'=>'Puntos de venta']);
 });

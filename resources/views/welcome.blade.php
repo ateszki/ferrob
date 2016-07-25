@@ -1,45 +1,63 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('ferrobet')
+@section('title')
+{{$title}}
+@endsection
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+@section('content')
+<!-- Header -->
+    <header>
+        <div class="container container-body">
+            <div class="intro-text">
+                <a href="#services" class="page-scroll btn btn-xl">Ver productos</a>
             </div>
         </div>
-    </body>
-</html>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Productos</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="row"><!-- Picto -->
+                     <img class="img-responsive center-block img-circle" src="{{URL::to('img/picto-esmalte.png')}}" alt="esmaltes">
+                    </div>
+                    <h4 class="service-heading">Esmaltes</h4>
+                    <p class="text-muted"><a href="#">DUO EXPRESS ESMALTE CONVERTIDOR</a><br>
+                    Brillante. Secado Ultra Rápido -Todo Metal</p>
+                    <p class="text-muted"><a href="#">DUO CLASSIC ESMALTE CONVERTIDOR</a><br>
+                    Esmalte convertidor de óxido para metales.</p>
+                    <p class="text-muted"><a href="#">DUO EFECTOS ESPECIALES</a><br>
+                    Para metales</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="row"><!-- Picto -->
+                     <img class="img-responsive center-block img-circle" src="{{URL::to('img/picto-convert.png')}}"  alt="convertidores">
+                    </div>
+                    <h4 class="service-heading">Convertidores</h4>
+                    <p class="text-muted"><a href="#">CONVERTIDOR DE OXIDO FERRO BET</a><br>
+                    Para metales</p>
+                    <p class="text-muted"><a href="#">FERRO BET FONDO</a><br>
+                    Para galvanizado y aluminio.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="row"><!-- Picto -->
+                     <img class="img-responsive center-block img-circle" src="{{URL::to('img/picto-antiox.png')}}"  alt="antioxidos">
+                    </div>
+                    <h4 class="service-heading">Antióxidos y Complementos</h4>
+                    <p class="text-muted"><a href="#">ANTIOXIDO FERROBET</a><br>
+                    Fondo para superficies ferrosas</p>
+                    <p class="text-muted"><a href="#">FERRO BET DESOXIDANTE</a><br>
+                    Desoxidante y fosfatizante para metales.</p>
+                    <p class="text-muted"><a href="#">DILUYENTE DUO EXPRESS</a><br>
+                    Para diluir esmalte convertidor duo express</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@endsection
