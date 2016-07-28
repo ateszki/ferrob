@@ -26,3 +26,7 @@ Route::get('/contacto', function () {
 Route::get('/puntos-de-venta', function () {
     return view('puntosdeventa',['title'=>'Puntos de venta']);
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
