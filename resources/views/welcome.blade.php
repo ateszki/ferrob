@@ -8,7 +8,7 @@
     <header>
         <div class="container container-body">
             <div class="intro-text">
-                <a href="#services" class="page-scroll btn btn-xl">Ver productos</a>
+                &nbsp;
             </div>
         </div>
     </header>
