@@ -13,40 +13,20 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="btn-group navbar-right" role="group" aria-label="...">
                 <ul class="nav navbar-nav navbar-right">
-                
+                  @foreach($categorias as $categoria)
                     <li>
                   <div class="btn-group">
                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Esmaltes <span class="caret"></span>
+                        {{$categoria->nombre}} <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Duo Classic Esmalte Convertidor</a></li>
-                        <li><a href="#">Duo Classic Express Convertidor</a></li>
-                        <li><a href="/producto">Duo Efectos Especiales</a></li>
+                        @foreach($categoria->productos as $producto)
+                        <li><a href="/producto">{{$producto->nombre}}</a></li>
+                        @endforeach
                       </ul>
                   </div>
-                    </li><li>
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Convertidores <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Convertidor de óxido Ferrobet</a></li>
-                        <li><a href="#">Ferrobet Fondo</a></li>
-                      </ul>
-                  </div>
-                  </li><li>
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Antioxidos y Complementos<span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Antióxido Ferrobet</a></li>
-                        <li><a href="#">Ferrobet Desoxidante</a></li>
-                        <li><a href="/producto2">Diluyente Duo Express</a></li>
-                      </ul>
-                  </div>
-                  </li>
+                    </li>
+                    @endforeach
                   </ul>
                 
                 <div class="btn-group top-menu" role="group" aria-label="...">
