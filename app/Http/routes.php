@@ -32,3 +32,9 @@ Route::get('/puntos-de-venta', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+/*
+if (\Request::is('panel/*'))
+{
+    \Config::set('panel.controllers', 'Serverfireteam\blog\panel');
+}
+*/
