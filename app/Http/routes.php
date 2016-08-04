@@ -16,6 +16,10 @@
 Route::get('/', function () {
     return view('welcome',['title'=>'Proteje tus metales']);
 });
+Route::get('/producto/{slug}', function ($slug) {
+	$producto = App\Producto::where('slug','=',$slug)->firstOrFail();
+    return view('producto',['title'=>$producto->nombre,'producto'=>$producto]);
+});
 Route::get('/producto', function () {
     return view('producto',['title'=>'Producto']);
 });

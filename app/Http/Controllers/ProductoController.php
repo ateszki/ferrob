@@ -40,9 +40,15 @@ class ProductoController extends CrudController{
 
 			$this->edit->label('Editar Producto');
 
+			$this->edit->add('slug', 'Slug', 'text')->rule('required');
+			
 			$this->edit->add('nombre', 'Nombre', 'text')->rule('required');
 		
 			$this->edit->add('descripcion', 'Descripcion', 'text');
+
+			$this->edit->add('img', 'Foto', 'image')->move('uploads/images/')->preview(160,160);
+			
+			$this->edit->add('img_chica', 'Foto Chica', 'image')->move('uploads/images/')->preview(80,80);
 
         return $this->returnEditView();
     }    

@@ -9,8 +9,8 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
-                <h1>DUO EFECTOS ESPECIALES</h1><br>
-                <h3>Para metales</h3>
+                <h1>{{$producto->nombre}}</h1><br>
+                <h3>{{$producto->descripcion}}</h3>
                 <h4>• Terminación rústica.<br>
                     • Brillo Mate.
                 </h4>
@@ -25,7 +25,7 @@
                 En el caso de los forjados, utilizan en su formulación pigmentos de óxido de hierro micáceo, son químicamente inalterables, debido a la estructura laminar de su partícula que establece una barrera física que evita el paso del agua y sus sales; factores nocivos frente a la corrosión. Su elástica película no se cuartea ni resquebraja, conservando muy buena adherencia, sin ampollarse ni descascararse. Embellecen los metales ferrosos con un mínimo de mano de obra, sencilla aplicación y notable economía de producto, brindando una textura de especial estilo, tanto para exteriores como para interiores.</p>
             </div>
             <div class="col-sm-6 col-md-4">
-                    <img class="img-responsive" src="{{URL::to('img/latavacia.png')}}"  alt="esmalte">
+                    <img class="img-responsive" src="{{URL::to((file_exists(public_path().'/uploads/images/'.$producto->img))?'uploads/images/'.$producto->img:'img/latavacia.png')}}"  alt="{{$producto->nombre}}">
             </div>
             <div class="col-sm-6 col-sm-offset-4 col-md-4 col-md-offset-0">
                 <p><strong>Rendimiento:</strong> 12 a 15 m²/lt. por mano, dependiendo del espesor, de la dilución, de la rugosidad de la superficie.<br>

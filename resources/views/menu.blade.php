@@ -21,7 +21,7 @@
                       </button>
                       <ul class="dropdown-menu">
                         @foreach($categoria->productos as $producto)
-                        <li><a href="/producto">{{$producto->nombre}}</a></li>
+                        <li><a href="/producto/{{$producto->slug}}">{{$producto->nombre}}</a></li>
                         @endforeach
                       </ul>
                   </div>
@@ -35,7 +35,7 @@
                         <li></li>
                             <a  class="btn btn-default" href="/puntos-de-venta">Puntos de Venta</a>
                         <li></li>
-                            <a class="btn btn-default" href="https://www.youtube.com/watch?v=Kdj9CtpQKl4" target="_blank">Videos</a>
+                            <a class="btn btn-default" href="https://www.youtube.com/channel/UCZHgDtYmIUBg5rKISDqEIFg" target="_blank">Videos</a>
                         <li></li>
                         <div class="btn-group">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contacto<span class="caret"></span>

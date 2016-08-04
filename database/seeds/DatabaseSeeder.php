@@ -57,11 +57,6 @@ class ProductoTableSeeder extends Seeder
 			],
 			[
 				"categoria_id"=>3,
-				"nombre"=>"ANTIOXIDO FERROBET",
-				"descripcion"=>"Fondo para superficies ferrosas",
-			],
-			[
-				"categoria_id"=>3,
 				"nombre"=>"FERRO BET DESOXIDANTE",
 				"descripcion"=>"Desoxidante y fosfatizante para metales.",
 			],
